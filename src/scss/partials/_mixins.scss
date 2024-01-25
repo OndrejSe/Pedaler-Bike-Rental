@@ -1,0 +1,176 @@
+@import "variables";
+
+@mixin responsive($breakpoint) {
+    @if($breakpoint == sm) {
+        @media only screen and (min-width:576px){
+            @content
+        }
+    }
+    @if($breakpoint == md) {
+        @media only screen and (min-width:768px){
+            @content
+        }
+    }
+    @if($breakpoint == lg) {
+        @media only screen and (min-width:992px){
+            @content
+        }
+    }
+    @if($breakpoint == xl) {
+        @media only screen and (min-width:1200px){
+            @content
+        }
+    }
+}
+
+@mixin section-layout() {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    padding: 2.5rem 1rem;
+    @media only screen and (min-width:768px) {
+        padding: 2.5rem;
+    }
+    @media only screen and (min-width:1200px) {
+        padding: 2.5rem 4rem;
+    }
+}
+
+@mixin section-heading() {
+    width: auto;
+    text-align: center;
+    margin: 0 auto 0rem auto;
+    text-transform: capitalize;
+    padding: 0 1.5rem 1rem 1.5rem;
+    color: $theme-color-darker;
+    font-size: 2rem;
+    border-bottom: $border-bold-semi-dark;
+}
+
+@mixin screen-height() {
+    min-height: 100vh;
+}
+
+@mixin responsive-image() {
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+}
+
+@mixin image-hover() {
+    overflow: hidden;
+        img {
+            transition: $transition-smooth-third;
+        }
+    &:hover {
+        img {
+            transform: scale(1.04);
+        }
+    }
+}
+
+@mixin span-column() {
+        display: flex;
+        flex-direction: column;
+        gap: 0.25rem;
+}
+
+@mixin column-boxes() {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+@mixin accordion() {
+    .box-header {
+        display: flex;
+        gap: 2rem;
+        justify-content: space-between;
+        border-bottom: $border-thin-neutral;
+        padding-bottom: 0.5rem;
+        margin-bottom: 0.75rem;
+        button {
+            background-color: transparent;
+            transition: $transition-smooth-fifth;
+            i {
+                color: $theme-color-dark;
+                font-size: 1rem;
+            }
+            &:hover {
+                transform: rotate(90deg);
+            }
+        }
+    }
+    .content-box {
+        height: 0;
+        overflow: hidden;
+        transition: $transition-smooth-fifth;
+    }
+    .fa-minus {
+        display: none !important;
+    }
+    &.active {
+        .fa-minus {
+            display: block !important;
+        }
+        .fa-plus {
+            display: none;
+        }
+    }
+}
+
+@mixin form-input {
+    padding: 0.25rem;
+    border-radius: 0.25rem;
+    border: none;
+    outline: none;
+    background-color: $theme-color-lightest;
+    color: $theme-color-dark;
+    border: $border-bold-light;
+    overflow: hidden;
+    &:focus-within {
+        border: $border-bold-neutral;
+    }
+    &:-webkit-autofill,
+    &:-webkit-autofill:hover, 
+    &:-webkit-autofill:focus, 
+    &:-webkit-autofill:active {
+        -webkit-box-shadow: 0 0 0 30px $theme-color-lightest inset !important;
+        -webkit-text-fill-color: $theme-color-dark;
+    }
+}
+
+@mixin sidebar-submit-button {
+    width: 100%;
+    color: $theme-color-lighter;
+    background-color: $theme-color-darker;
+    text-transform: uppercase;
+    padding: 0.5rem 1.5rem;
+    border-radius: 2rem;
+    font-weight: 500;
+    transition: $transition-smooth-fifth;
+    cursor: pointer;
+    &:hover{
+        background-color: $theme-color-dark;
+    }
+}
+
+@mixin close-button {
+    background-color: transparent;
+    width: fit-content;
+    transition: all 0.2s ease-in-out;
+    &:hover {
+        transform: rotate(90deg);
+        i {
+            color: $theme-color-darker;
+        }
+    }
+    i {
+        color: $theme-color-dark;
+        font-size: 1.25rem;
+    }
+}

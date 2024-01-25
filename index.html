@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en" class="smooth-scroll">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pedaler Bike Rental</title>
+    <link rel="icon" type="image/x-icon" href="/images/icons/favicon.ico">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <script src="https://kit.fontawesome.com/e6a3eae7fd.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div id="preloader">
+        <div class="logo">
+            <img src="./images/icons/crank.png" />
+            <span class="brand-name">pedaler</span>
+        </div>
+        <i class="fa-solid fa-spinner fa-spin"></i>
+    </div>
+
+    <header id="hero-section">
+        <nav class="nav-bar" data-aos="fade-down">
+            <div class="nav-main">
+                <button class="menu-button">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+                <div class="nav-menu">
+                    <ul class="nav-list">
+                        <!-- Nav links created through Javascript (see nav.js) -->
+                    </ul>
+                </div>
+                <button class="logo">
+                    <img src="./images/icons/crank.png" />
+                    <h4>pedaler</h4>
+                </button>
+            </div>
+
+            <button id="cart-btn">
+                <i class="fa-solid fa-cart-shopping"></i>
+                <span id="cart-counter">0</span>
+            </button>
+        </nav>
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1 data-aos="fade-right">pedaler</span></h1>
+                <h2 data-aos="fade-left">rent bike and explore</h2>
+            </div>
+            <button class="hero-button" data-aos="zoom-in"><a href="#booking" class="nav-link">book a bike</a></button>
+        </div>
+    </header>
+    <section id="about">
+        <article class="home-content">
+            <h1 data-aos="fade-up">about us</h1>
+            <div class="about-header">
+                <div class="header-text" data-aos="fade-up">
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vel ullam recusandae expedita quidem. Aut, voluptas porro! Neque veritatis aliquam maxime enim rerum labore, similique fugiat architecto aspernatur sequi aperiam consequuntur. Saepe veritatis asperiores minima incidunt suscipit repudiandae odit modi enim harum quisquam. Doloremque totam debitis voluptate aliquid cupiditate animi sequi quae voluptatibus explicabo mollitia, consequatur tenetur placeat. Voluptates, excepturi aspernatur unde nam consectetur impedit? Deleniti et commodi blanditiis!</p>
+                </div>
+                <div class="header-image" data-aos="fade-up">
+                    <img src="./images/promo-photos/cover-jack-delulio-oro0KHgeQ_g-unsplash.jpg" alt="">
+                </div>
+            </div>
+            <div id="about-subcontent">
+                <!-- Content containers created through Javascript (see about.js) -->
+            </div>
+        </article>
+    </section>
+    <section id="booking">
+        <h1 data-aos="fade-up">Available bikes</h1>
+        <div class="product-window">
+            <div class="product-nav" data-aos="fade-up">
+                <div class="product-filter">
+                    <span class="filter-name">Bike type</span>
+                    <div class="filter-btn-container">
+                        <!-- Filter buttons for each category created through Javascript (see rental.js)-->
+                    </div>
+                </div>
+                <form class="product-search">
+                    <button type="button"><i class="fa-solid fa-magnifying-glass"></i></button>
+                    <input type="text" class="search-input" placeholder="Search...">
+                </form>
+            </div>
+            <div class="product-container" data-aos="fade-up">
+                <!-- Available products elements created through Javascript (see rental.js) -->
+            </div>
+        </div>
+    </section>
+    
+    <section id="reviews">
+        <h1 data-aos="fade-up">Reviews</h1>
+        <div class="review-container" data-aos="fade-up">
+            <div id="review-slideshow">
+                <!-- Review slides created through Javascript (see reviews.js)  -->
+            </div>
+
+            <div class="review-button-container">
+                <button class="review-button previous-button">
+                    <i class="fa-solid fa-chevron-left"></i>
+                </button>
+                <span class="slider-position">
+                    <!-- Dots to indicate slider position created through Javascript (see reviews.js) -->
+                </span>
+                <button class="review-button next-button active">
+                    <i class="fa-solid fa-chevron-right"></i>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <section id="help">
+        <h1 data-aos="fade-up">Help</h1>
+        <div id="help-content">
+            <div id="faq" data-aos="fade-right">
+                <h2>Frequently asked questions</h2>
+                <div id="questions-container">
+                    <!-- FAQ created through Javascript (see help.js) -->
+                </div>
+            </div>
+            <div id="ask-us" data-aos="fade-left">
+                <h2>Ask us</h2>
+                <form id="question-form">
+                    <p>Didn't find your question? Ask our experts directly.</p>
+                    <div class="input-div">
+                        <label>First name</label>
+                        <input type="text" for="first-name" class="input first-name" placeholder="John" required>
+                        <span class="alert">Please enter your first name</span>
+                    </div>
+                    <div class="input-div">
+                        <label>Last name</label>
+                        <input type="text" for="last-name" class="input last-name" placeholder="Smith" required>
+                        <span class="alert">Please enter your last name</span>
+                    </div>
+                    <div class="input-div">
+                    <label>Email</label>
+                    <input type="email" for="email" class="input email" placeholder="johnsmith@email.com" required >
+                    <span class="alert">Please enter valid email</span>
+                    </div>
+                    <div class="message-div">
+                        <textarea for="question-message" id="question-message" maxlength="280" class="input question-message" placeholder="Your question..." required></textarea>
+                        <span class="alert">We need your question.</span>
+                        <span id="question-counter">0/280</span>
+                    </div>
+                    <input type="submit" id="question-submit" value ="Send question" formnovalidate="formnovalidate"/>
+                </form>
+                <div id="question-send">
+                    <span><strong>Your question was send to us.</strong></span>
+                    <span>We will answer as soon as possible.</span>
+                    <button id="ask-again-button">Ask again</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-logo">
+            <img src="./images/icons/crank.png" />
+            <h2>pedaler</h2>
+            <span>rent bike and explore</span>
+        </div>
+
+        <div class="browse">
+            <h4>Browse</h4>
+            <ul class="footer-nav">            
+                <!-- Nav links created through Javascript (see footer.js) -->
+            </ul>
+        </div>
+
+        <div class="follow-us">
+            <h4>follow us</h4>
+            <div class="social-links">
+                <!-- Social media icons with links displayed through Javascript (see footer.js) -->
+            </div>
+        </div>
+
+        <div class="payment">
+            <h4>payment methods</h4>
+            <div class="payment-methods">
+                <!-- Payment methods icons displayed through Javascript (see footer.js) -->
+            </div>
+        </div>
+
+        <div class="copyright-container">
+            <span id="copyright">2024</span>
+            <span class="dev-info">Sample page designed and coded by <a href="https://www.linkedin.com/in/ond%C5%99ej-sedl%C3%A1k-278535298/" target="_blank">Ondřej&nbsp;Sedlák</a>.</span>
+        </div>
+    </footer>
+
+    <div class="modal">
+        <div class="overlay">
+            <!-- modal background -->
+        </div>
+        <div class="product-sidebar">
+            <!-- Details and order form for particular product loaded through Javascript (see productSidebar.js) -->
+        </div>
+        <div id="shopping-cart">
+            <button class="close-btn">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+            <h3>your order</h3>
+            <div id="order-list">
+                <!-- Items added to shopping cart loaded from local storage through Javascript (see shoppingCart.js) -->
+            </div>
+            <div id="cart-footer">
+                <span>subtotal</span>
+                <span id="cart-subtotal">
+                    <!-- Price of current order calculated through Javascript (see shoppingCart.js) -->
+                </span>
+                <span class="subtotal-deposit">
+                    <span>deposit</span>
+                    <span id="subtotal-deposit-value">€25</span>
+                </span>
+                <button>checkout</button>
+            </div>
+        </div>
+    </div>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script type="module" src="script.js"></script>
+</body>
+</html>

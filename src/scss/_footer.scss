@@ -1,0 +1,127 @@
+footer {
+    background-color: $theme-color-darker;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1.5rem;
+    gap: 1.5rem;
+    position: relative;
+    h4 {
+        text-transform: uppercase;
+        color: $theme-color-lighter;
+        font-weight: 500;
+        text-align: center;
+    }
+    @include responsive(md) {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        padding: 2.5rem;
+        h4 {
+            text-align: left;
+        }
+    }
+    @include responsive(lg) {
+        gap: 2rem;
+    }
+}
+
+.footer-logo {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    img {
+        width: 4rem;
+        filter: invert(1);
+        opacity: 0.8;
+    }
+    h2 {
+        color: $theme-color-lighter;
+        text-transform: uppercase;
+        font-weight: 500;
+    }
+    span {
+        color: $theme-color-neutral;
+        text-transform: uppercase;
+    }
+    @include responsive(lg) {
+        width: auto;
+    }
+}
+
+.browse, .follow-us, .payment {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.footer-nav {
+    display: flex;
+    gap: 1rem;
+    width: fit-content; 
+    a {
+        color: $theme-color-lighter;
+        transition: $transition-smooth-fifth;
+        text-transform: capitalize;
+        &:hover {
+            color: $theme-color-neutral;
+        }
+    }
+}
+
+.follow-us {
+    .social-links {
+        display: flex;
+        gap: 0.75rem;
+        i {
+            color: $theme-color-lighter;
+            font-size: 1.25rem;
+            transition: $transition-smooth-third;
+            &:hover {
+                color: $theme-color-neutral;
+            }
+        }
+    }
+}
+
+.payment-methods {
+    display: flex;
+    gap: 0.75rem;
+    position: relative;
+    i {
+        color: $theme-color-light;
+        font-size: 1.75rem;
+    }
+}
+
+.copyright-container {
+    width: 100%;
+    color: $theme-color-light;
+    border-top: $border-thin-dark;
+    padding-top: 1.5rem;
+    margin-top: 0.5rem;
+    text-align: center;
+    span {
+        display: block;
+        width: 100%;
+        text-align: center;
+    }
+}
+
+.dev-info {
+    color: $theme-color-semi-dark;
+    text-align: center;
+    padding: 1rem;
+    a {
+        font-weight: 500;
+        color: $theme-color-semi-dark;
+        transition: $transition-smooth-fifth;
+        &:hover {
+            color: $theme-color-neutral;
+        }
+    }
+}

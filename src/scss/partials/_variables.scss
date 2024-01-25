@@ -1,0 +1,23 @@
+$theme-color-lightest: #FAF3EA;
+$theme-color-lighter: #F8EEE2;
+$theme-color-light: #F3E5D4;
+$theme-color-neutral: #E8D3BB;
+$theme-color-semi-dark: #C2A98B;
+$theme-color-dark: #695A47;
+$theme-color-darker: #4E453A;
+$theme-color-darkest: #1E1A15;
+
+$color-alert-dark: #B27451;
+$color-alert-light: #FFC4A3;
+
+$border-thin-neutral: 1px solid $theme-color-neutral;
+$border-thin-semi-dark: 1px solid $theme-color-semi-dark;
+$border-thin-dark: 1px solid $theme-color-dark;
+$border-bold-neutral: 2px solid $theme-color-neutral;
+$border-bold-light: 2px solid $theme-color-light;
+$border-bold-semi-dark: 2px solid $theme-color-semi-dark;
+$border-bold-transparent: 2px solid transparent;
+
+$transition-smooth-fifth: all 0.2s linear;
+$transition-smooth-third: all 0.3s linear;
+$transition-smooth-half: all 0.5s linear;

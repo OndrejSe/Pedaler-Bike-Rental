@@ -1,0 +1,195 @@
+@import "./partials/mixins";
+@import "./partials/variables";
+
+#about {
+    @include section-layout();
+    h1 {
+        @include section-heading();
+    }
+}
+
+.about-header {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 1.5rem 0;
+    width: auto;
+    text-align: left;
+    p {
+        color: $theme-color-darker;
+    }
+    @include responsive(md) {
+        width: 100%;
+        .header-image {
+            height: 45vh;
+        }
+    }
+}
+
+.header-image {
+    @include responsive-image();
+    height: 18rem;
+    width: 100%;
+    position: relative;
+    filter: grayscale(0.5);
+    .image-overlay {
+        position: absolute;
+    }
+}
+
+.header-text {
+    margin: 1rem auto;
+    text-align: center;
+    max-width: 68rem;
+    line-height: 1.5;
+}
+
+.home-content {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    gap: 0.25rem;
+    margin-bottom: 2rem;
+    @include responsive(xl) {
+        max-width: 80rem;
+    }
+}
+
+#about-subcontent {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    gap: 0.25rem;
+    .image-container {
+        @include responsive-image();
+        @include image-hover();
+        width: 100%;
+        height: 18rem;
+        position: relative;
+        &:hover {
+            .image-overlay {
+                opacity: 0;
+                visibility: hidden;
+                h1{
+                    display: none
+                }
+            }
+        }
+        .caption {
+            max-width: 18rem
+        }
+    }
+    .text-container {
+        width: 100%;
+        color: $theme-color-dark;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 1rem;
+        padding: 1rem;
+        text-align: center;
+        min-height: 18rem;
+        .text-box {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 0.75rem 1.5rem;
+            width: 100%;
+            max-width: 22rem;
+            h2 {
+                width: 100%;
+                font-size: 1.25rem;
+                color: $theme-color-darker;
+                text-transform: uppercase;
+                border-bottom: $border-thin-semi-dark;
+                padding-bottom: 0.25rem;
+            }
+        }
+        .adress-box {
+            width: 100%
+        } 
+        .info {
+            @include span-column();
+            width: fit-content;
+            &.adress {
+                width: 100%;
+            }
+        }
+    }
+    .image-overlay {
+        @include span-column();
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 0;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background: rgba($theme-color-darker, 0.7);
+        transition: $transition-smooth-fifth;
+        color: $theme-color-lighter;
+        span {
+            width: 100%;
+            text-align: center;
+            font-size: 2rem;
+            font-weight: 700;
+            text-transform: uppercase;
+        }
+    }
+    .map-container {
+        iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+            opacity: 0;
+            position: absolute;
+            top: 0;
+            left: 0;
+            transition: $transition-smooth-fifth;
+        }
+        i {
+            margin-right: 0.5rem;
+        }
+        &:hover {
+            iframe {
+                opacity: 1;
+            }
+            img {
+                display: none;
+            }
+        }
+    }
+    @include responsive(sm) {
+        .image-container {
+            width: calc(50% - 0.125rem);
+        }
+        .text-container {
+            padding: 1rem;
+        }
+        .map-container {
+            width: 100%;
+        }
+    }
+    @include responsive(md) {
+        .image-container {
+            span {
+                font-size: 2.25rem;
+            }
+        }
+        .text-container, .map-container {
+            width: calc(50% - 0.125rem);
+        }
+    }
+    @include responsive(xl) {
+        max-width: 80rem;
+        .image-container, .text-container {
+            width: calc(100%/3 - 0.5rem/3);
+        }
+    }
+}
